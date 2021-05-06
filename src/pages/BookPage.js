@@ -19,11 +19,6 @@ export const BookPage = () => {
   const [pageNumber, setPageNumber] = useState(1);
   
   useEffect(() => {
-    fetchAllBooks();
-  }, [pageNumber]);
-
-
-  const fetchAllBooks = () => {
     setLoading(true);
     fetch(`https://jessikas-book-api.herokuapp.com/books?page=${pageNumber}`)
       .then((response) => response.json())
@@ -31,7 +26,7 @@ export const BookPage = () => {
         setBooks(json.books);
         setLoading(false);
       })
-  }
+  }, [pageNumber]);
 
   const handlePageChange = (event, value) => {
     setPageNumber(value);
