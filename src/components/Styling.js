@@ -25,7 +25,10 @@ export const Navigation = styled.nav`
   justify-content: space-between;
   background-color: #557571;
   border-bottom: 2px solid white;
-  padding: 7px 20px;
+  padding: 7px 10px;
+  @media (min-width: 768px) {
+    padding: 7px 20px;
+}
 `;
 
 export const TitleContainer = styled.div`

@@ -35,7 +35,7 @@ export const TopRated = () => {
         ? <Loading />
         :
         <>
-          <TopRatedTitle>Top Twenty Rated Books</TopRatedTitle>
+          <TopRatedTitle>Top Twenty Books</TopRatedTitle>
           <CardsContainer>
             {books.map((book) => (
               <BookCard key={book.bookID}>
